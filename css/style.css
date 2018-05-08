@@ -88,13 +88,21 @@ h2 + p {
     text-indent: 0em;
 }
 
-p.caption {
+figcaption {
+    font-family: 'EB Garamond', serif;
     text-indent: 0em;
+    font-size: 1.4rem;
+    line-height: 2rem;
     word-break: break-all;
 }
 
 h1, h2, h3 {
     font-family: 'BloggerSans', sans-serif;
+}
+
+figure {
+    margin: 0 0 1em 0;
+    padding: 0.3em 0 0 0;
 }
 
 img.qrcode {
