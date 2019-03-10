@@ -8,8 +8,7 @@ compileTemplates = match "templates/*.html" $ compile templateCompiler
 
 myWriterOptions :: WriterOptions
 myWriterOptions = defaultHakyllWriterOptions
-    { writerHtml5 = True
-    , writerSectionDivs = True
+    { writerSectionDivs = True
     }
 
 main :: IO ()
@@ -24,7 +23,11 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
-  match "images/*" $ do
+  match "images/**" $ do
+    route   idRoute
+    compile copyFileCompiler
+
+  match "files/**" $ do
     route   idRoute
     compile copyFileCompiler
 
@@ -37,7 +40,7 @@ main = hakyll $ do
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/default-en.html" defaultContext
 
-  match ("*-ru.md" .||. "index.md") $ do
+  match ("**-ru.md" .||. "index.md") $ do
     route   $ setExtension "html"
     compile $ (pandocCompilerWith defaultHakyllReaderOptions myWriterOptions)
       >>= loadAndApplyTemplate "templates/default-ru.html" defaultContext
