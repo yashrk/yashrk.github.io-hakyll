@@ -256,7 +256,7 @@ title: Шведская Лапландия-2018
 большой снежник под перевалом вдоль многочисленных ручьёв.
 
 <figure>
-[![Эти двое бросали свои рюкзаки в верхнем цирке](/images/travels/Laplandia-2018/thumbnails/2018-08-06-kaskasvagge-climbing.jpeg)](/images/travels/Laplandia-2018/2018-08-06-kaskasvagge-climbing.jpeg)
+[![Эти двое бросали свои рюкзаки в верхнем цирке](/images/travels/Laplandia-2018/thumbnails/2018-08-06-kuopervagge-climbing.jpeg)](/images/travels/Laplandia-2018/2018-08-06-kuopervagge-climbing.jpeg)
 <figcaption>
 Эти двое бросали свои рюкзаки в верхнем цирке
 </figcaption>
