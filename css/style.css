@@ -80,7 +80,16 @@ body {
     }
 
     img {
-        max-width: 100%;
+        max-width: 95%;
+    }
+
+    .table-wrapper {
+        overflow: scroll;
+        width: 90vw;
+
+        .table {
+            width: 1000px;
+        }
     }
 }
 
@@ -193,9 +202,4 @@ tr:nth-child(odd) {
 
 td {
     padding: 0.5em;
-}
-
-.table-wrapper {
-    overflow: scroll;
-    width: 100vw;
 }
