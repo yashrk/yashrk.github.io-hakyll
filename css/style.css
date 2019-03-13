@@ -194,3 +194,8 @@ tr:nth-child(odd) {
 td {
     padding: 0.5em;
 }
+
+.table-wrapper {
+    overflow: scroll;
+    width: 100vw;
+}
