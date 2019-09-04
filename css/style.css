@@ -133,7 +133,7 @@ a, p {
     line-height: 2rem;
 }
 
-a {
+a.url {
     word-break: break-all;
 }
 
