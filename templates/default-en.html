@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>$title$</title>
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i|Roboto:700&amp;subset=cyrillic" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YuriyShirokov">
+    <meta name="twitter:title" content="$title$">
+    <meta name="twitter:description" content="$tldr$">
+    <meta name="twitter:image" content="$snippetImage$">
   </head>
   <body>
     <header></header>
@@ -16,9 +22,26 @@
       </ul>
       <div id="i18n"><a href="index.html">Русская версия</a></div>
     </nav>
-    <main>
-      <h1>$title$</h1>
+    <main itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name">$title$</h1>
       $body$
+      <!-- schema.org -->
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Yuriy Al. Shirokov">
+      </span>
+      <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="yashrk.github.io">
+        <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="images/capybara.jpeg">
+          <meta itemprop="width" content="100">
+          <meta itemprop="height" content="100">
+        </span>
+      </span>
+      <meta itemprop="headline" content="$title$">
+      <meta itemprop="datePublished" content="$datePublished$">
+      <meta itemprop="dateModified" content="$dateModified$">
+      <meta itemprop="image" content="$snippetImage$">
+      <meta itemprop="description" content="$tldr$">
     </main>
     <aside>
     </aside>
