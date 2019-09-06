@@ -35,6 +35,10 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
+  match "*.xml" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "*-en.md" $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
