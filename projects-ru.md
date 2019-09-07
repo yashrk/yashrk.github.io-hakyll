@@ -1,7 +1,7 @@
 ---
 title: Проекты
-datePublished: 2018-04-15
-dateModified: 2019-09-05
+published: 2018-04-15
+modified: 2019-09-05
 snippetImage: images/capybara.jpeg
 tldr: Мои домашние проекты
 ---

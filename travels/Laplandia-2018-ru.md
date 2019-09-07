@@ -1,7 +1,7 @@
 ---
 title: Шведская Лапландия-2018
-datePublished: 2018-03-10
-dateModified: 2019-09-07
+published: 2018-03-10
+modified: 2019-09-07
 snippetImage: /images/travels/Laplandia-2018/2018-08-06-tarfalapasset-2.jpeg
 tldr: Поход по Шведской Лапландии 2018 года
 ---

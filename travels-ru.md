@@ -1,7 +1,7 @@
 ---
 title: Путешествия
-datePublished: 2019-03-10
-dateModified: 2019-09-05
+published: 2019-03-10
+modified: 2019-09-05
 snippetImage: images/capybara.jpeg
 tldr: Походы и прочие путешествия
 ---
