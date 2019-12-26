@@ -44,6 +44,11 @@ main = hakyll $ do
     compile $ (pandocCompilerWith defaultHakyllReaderOptions myWriterOptions)
       >>= loadAndApplyTemplate "templates/webmention-comment.html" defaultContext
 
+  match "webmentions/likes/*.md" $ do
+    route   $ setExtension "html"
+    compile $ (pandocCompilerWith defaultHakyllReaderOptions myWriterOptions)
+      >>= loadAndApplyTemplate "templates/webmention-like.html" defaultContext
+
   match "*-en.md" $ do
     route   $ setExtension "html"
     compile $ pandocCompiler
