@@ -1,14 +1,20 @@
 ---
 title: Контакты
 published: 2018-05-06
-modified: 2019-12-25
+modified: 2019-12-26
 snippetImage: images/yashrk-ring.png
 tldr: Мои контакты
 ---
 
+::: {.h-card}
+
+Меня зовут [Юрий Широков]{.p-name}.
+
 Я не пользуюсь централизованными проприетарными мессенджерами (и рекомендую отказаться от них и вам, почему — хорошо объяснено, например, в [статье А.В.Столярова «Осторожно, частный сервис»](http://www.providernet.ru/article.48.php)). Пожалуйста, не просите меня завести Телеграм, WhatsApp или Viber.
 
 Для связи со мной можно использовать как распределённые мессенджеры (Tox, Jami), так и более традиционные федеративные (Jabber, Matrix). Ну и электронную почту, конечно.
+
+[Этот сайт](https://yashrk.github.io){.u-url rel="me"} поддерживает [Webmention](https://indieweb.org/webmention); вы можете прокомментировать, расшарить или полайкать с помощью Webmention любую его страницу.
 
 ## Jabber
 
@@ -28,7 +34,7 @@ yushi@jabber.ru
 
 ## Почта
 
-[yuriy.shirokov@gmail.com](mailto:yuriy.shirokov@gmail.com){rel="me"}
+[yuriy.shirokov@gmail.com](mailto:yuriy.shirokov@gmail.com){.u-email rel="me"}
 
 ## Свободное ПО
 
@@ -39,3 +45,5 @@ yushi@jabber.ru
  - Pixelfed (картинки): [https://pixelfed.social/yasrhk](https://pixelfed.social/yasrhk){rel="me"}
  - Pleroma: [https://freespeechextremist.com/yashrk](https://freespeechextremist.com/yashrk){rel="me"}
  - Twitter: [https://twitter.com/yuriyshirokov](https://twitter.com/yuriyshirokov){rel="me"}
+
+:::
