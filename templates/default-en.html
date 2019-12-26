@@ -41,7 +41,9 @@
       </span>
       <meta itemprop="headline" content="$title$">
       <meta itemprop="datePublished" content="$published$">
-      <meta itemprop="dateModified" content="$modified$">
+      $if(modified)$
+        <meta itemprop="dateModified" content="$modified$">
+      $endif$
       <meta itemprop="image" content="$snippetImage$">
       <meta itemprop="description" content="$tldr$">
     </main>
