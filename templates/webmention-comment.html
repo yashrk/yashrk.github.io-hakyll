@@ -38,6 +38,13 @@
             <time class="dt-published" datetime="$published$">$published$</time>
           </a>
         </p>
+        $if(modified)$
+          <p>
+            <a href="https://yashrk.github.io/webmentions/comments/1" class="u-url">
+              <time class="dt-updated" datetime=$modified$>$modified$</time>
+            </a>
+          </p>
+        $endif$
       </div>
       <!-- schema.org -->
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
