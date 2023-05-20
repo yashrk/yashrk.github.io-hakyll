@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               yashrk-github-io-hakyll
+version:            0.1.0.0
+
+synopsis: Yuriy Al. Shirokov's personal site
+
+-- A longer description of the package.
+-- description:
+
+license: AGPL-3.0-or-later
+author:             Yuriy Shirokov
+maintainer:         yuriy.shirokov@gmail.com
+
+-- category:
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+executable site
+    main-is:          site.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.15.1.0, hakyll, pandoc
+    hs-source-dirs:   .
+    default-language: Haskell2010
