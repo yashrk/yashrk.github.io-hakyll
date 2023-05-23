@@ -10,23 +10,19 @@ tldr: Contact information
 
 Hello, I'm [Yuriy Al. Shirokov]{.p-name}.
 
-[This site](https://yashrk.github.io){.u-url rel="me"} [Webmention](https://indieweb.org/webmention); you can comment, like or share it's pages with IndieWeb protocols.
-
-## Jabber
-
-yushi@jabber.ru
+[This site](https://yashrk.github.io){.u-url rel="me"} supports [Webmention](https://indieweb.org/webmention); you can comment, like or share it's pages with IndieWeb protocols.
 
 ## Matrix
 
 @yashrk:matrix.org
 
-## Tox
-
-![tox:65C4981CD4CF693AF0B6555D8E4736E9F02442B8FE2B87859B2D39C1BDB235541699E4604EA9](images/yashrk-tox.png "tox:65C4981CD4CF693AF0B6555D8E4736E9F02442B8FE2B87859B2D39C1BDB235541699E4604EA9"){.qrcode}
-
 ## Jami (ex-Ring)
 
 ![ring:7aa7c76d9f0656791683216ba11d3ff45441d2d1](images/yashrk-ring.png "ring:7aa7c76d9f0656791683216ba11d3ff45441d2d1"){.qrcode}
+
+## Jabber
+
+yushi@jabber.ru
 
 ## e-mail
 
