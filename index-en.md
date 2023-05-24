@@ -14,7 +14,9 @@ Hello, I'm [Yuriy Al. Shirokov]{.p-name}.
 
 ## Matrix
 
-@yashrk:matrix.org
+![@yashrk:matrix.org](images/yashrk-ring.png "@yashrk:matrix.org"){.qrcode}
+
+This is the main contact, e-mail and Matrix are most preferrable (and checked most often).
 
 ## Jami (ex-Ring)
 

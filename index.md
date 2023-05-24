@@ -18,7 +18,9 @@ tldr: Мои контакты
 
 ## Matrix
 
-@yashrk:matrix.org — это основной мессенджер, лучше писать туда
+![@yashrk:matrix.org](images/yashrk-ring.png "@yashrk:matrix.org"){.qrcode}
+
+Это основной мессенджер, лучше писать туда или на почту.
 
 ## Jami (раньше известный как Ring)
 
