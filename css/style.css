@@ -123,6 +123,18 @@ nav > ul > li > a {
     color: #0000ff;
 }
 
+/* Blog page */
+
+.title-link {
+    text-decoration: none;
+    text-indent: 0em;    
+    color: #000000;
+}
+
+.date-link {
+    text-indent: 0em;    
+}
+
 /* Main text properties */
 
 a, p {

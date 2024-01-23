@@ -29,6 +29,13 @@
     <main itemscope itemtype="http://schema.org/Article">
       <h1 itemprop="name">$title$</h1>
       $body$
+      $for(postList)$
+        <article>
+          <a href="$url$" class="title-link"><h1>$title$</h1></a>
+          <a href="$url$" class="date-link">$date$</a>
+          $body$
+        </article>
+      $endfor$
       <!-- schema.org -->
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="Юрий Широков">

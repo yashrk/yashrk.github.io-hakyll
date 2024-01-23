@@ -18,7 +18,7 @@ tldr: Мои контакты
 
 ## Matrix
 
-![@yashrk:matrix.org](images/yashrk-ring.png "@yashrk:matrix.org"){.qrcode}
+![@yashrk:matrix.org](images/yashrk-matrix.png "@yashrk:matrix.org"){.qrcode}
 
 Это основной мессенджер, лучше писать туда или на почту.
 
