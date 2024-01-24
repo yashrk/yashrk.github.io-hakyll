@@ -80,9 +80,11 @@ body {
 
     .date-link {
         text-align: right;
+        vertical-align: top;
         position: absolute;
-        margin: 0.25em 0 0 -1em;
+        margin: 0 0 0 -1em;
         transform:translateX(-100%);
+        font-weight: bold;
         width: 150px;
     }
 
