@@ -1,0 +1,16 @@
+<!-- blog-ru template output -->
+$partial("templates/header-ru.html")$
+    <main itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name">$title$</h1>
+      $body$
+      $for(postList)$
+        <!-- post -->
+        <article>
+          <a href="$url$" class="title-link"><h1>$title$</h1></a>
+          <a href="$url$" class="date-link">$date$</a>
+          $body$
+        </article>
+        <!-- post finished -->
+      $endfor$
+$partial("templates/footer-ru.html")$
+<!-- blog-ru template output finished -->

@@ -1,0 +1,5 @@
+AGPLv3 logo is public domain.
+Atom icon is public domain.
+RSS icon license is GNU GPL 2 or later (see https://en.wikipedia.org/wiki/File:Feed-icon.svg for details).
+
+All my images are distributed under CC-BY-SA licence.

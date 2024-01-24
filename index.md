@@ -18,7 +18,7 @@ tldr: Мои контакты
 
 ## Matrix
 
-![@yashrk:matrix.org](images/yashrk-ring.png "@yashrk:matrix.org"){.qrcode}
+![@yashrk:matrix.org](images/yashrk-matrix.png "@yashrk:matrix.org"){.qrcode}
 
 Это основной мессенджер, лучше писать туда или на почту.
 
@@ -40,7 +40,7 @@ yushi@jabber.ru
 
 ## Соцсети и прочее
 
- - Pixelfed (картинки): [https://pixelfed.social/yasrhk](https://pixelfed.social/yasrhk){rel="me"}
+ - Pixelfed (картинки): [https://pixelfed.social/yashrk](https://pixelfed.social/yashrk){rel="me"}
  - Pleroma: [https://freespeechextremist.com/yashrk](https://freespeechextremist.com/yashrk){rel="me"}
  - Twitter: [https://twitter.com/yuriyshirokov](https://twitter.com/yuriyshirokov){rel="me"}
 
