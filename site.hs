@@ -2,8 +2,6 @@
 
 import Hakyll
 import Text.Pandoc.Options
-import Data.List
-import Data.List.Split
 
 -- Utilities
 
