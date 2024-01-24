@@ -31,7 +31,7 @@ allPostsContext = listField "postList" normalDateCtx loadPosts
   <> normalDateCtx
 
 loadPosts :: Compiler [Item String]
-loadPosts = loadAllSnapshots "posts/*-ru.md" postsSnapshot
+loadPosts = loadAllSnapshots "posts/*-ru.md" postsSnapshot >>= recentFirst
 
 -- General site description
 
