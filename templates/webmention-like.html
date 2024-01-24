@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>$target$</title>
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i|Roboto:700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YuriyShirokov">
-    <meta name="twitter:target" content="$target$">
-    <meta name="twitter:description" content="$tldr$">
-    <meta name="twitter:image" content="https://yashrk.github.io$snippetImage$">
-    <link rel="webmention" href="https://webmention.io/yashrk.github.io/webmention">
-    <link rel="pingback" href="https://webmention.io/yashrk.github.io/xmlrpc">
-  </head>
-  <body>
-    <header></header>
-    <nav>
-      <ul>
-        <li><a href="/index.html">Контакты</a></li>
-        <li><a href="/projects-ru.html">Проекты</a></li>
-        <li><a href="/travels-ru.html">Путешествия</a></li>
-      </ul>
-    </nav>
+<!-- webmention-like template output -->
+$partial("templates/header-ru.html")$
+    <!-- webmention-like itself -->
     <main itemscope itemtype="http://schema.org/Article">
       <h1 itemprop="name">$target$</h1>
       <div class="h-entry">
@@ -35,30 +12,6 @@
           <span class="p-summary"> liked a page <a class="u-like-of" href="$target$">$target$</a>.</span>
         </p>
       </div>
-      <!-- schema.org -->
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="Юрий Широков">
-      </span>
-      <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="yashrk.github.io">
-        <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-          <meta itemprop="url" content="images/capybara.jpeg">
-          <meta itemprop="image" content="images/capybara.jpeg">
-          <meta itemprop="width" content="100">
-          <meta itemprop="height" content="100">
-        </span>
-      </span>
-      <meta itemprop="headline" content="$target$">
-      <meta itemprop="datePublished" content="$published$">
-      $if(modified)$
-        <meta itemprop="dateModified" content="$modified$">
-      $endif$
-      <meta itemprop="image" content="$snippetImage$">
-      <meta itemprop="description" content="$tldr$">
-    </main>
-    <aside>
-    </aside>
-    <footer>
-    </footer>
-  </body>
-</html>
+      <!-- webmention-like itself finished-->
+$partial("templates/footer-ru.html")$
+<!-- webmention-like template output finished -->
