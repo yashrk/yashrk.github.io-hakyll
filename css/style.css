@@ -74,6 +74,14 @@ body {
         width: 150px;
     }
 
+    .date-link {
+        text-align: right;
+        position: absolute;
+        margin: 0.25em 0 0 -1em;
+        transform:translateX(-100%);
+        width: 150px;
+    }
+
     p {
         max-width: 90ch;
     }
@@ -153,6 +161,14 @@ nav > ul > li > a {
 
 .date-link {
     text-indent: 0em;    
+}
+
+.feed-link p {
+    text-indent: 0em;    
+}
+
+.feed-link img {
+    vertical-align: bottom;
 }
 
 /* Main text properties */

@@ -17,6 +17,15 @@ myWriterOptions = defaultHakyllWriterOptions
     { writerSectionDivs = True
     }
 
+feedConfiguration :: FeedConfiguration
+feedConfiguration =  FeedConfiguration
+    { feedTitle       = "Юрий Широков"
+    , feedDescription = "yashrk's notes"
+    , feedAuthorName  = "Юрий Широков"
+    , feedAuthorEmail = "yuriy.shirokov@gmail.com"
+    , feedRoot        = "https://yashrk.github.io"
+    }
+
 -- Blog feed
 
 postsSnapshot :: Snapshot
@@ -96,3 +105,18 @@ main = hakyll $ do
     compile $ do
       pandocCompilerWith defaultHakyllReaderOptions myWriterOptions
       >>= loadAndApplyTemplate "templates/blog-ru.html" allPostsContext
+
+  create ["atom.xml"] $ do
+    route idRoute
+    compile $ do
+      let feedCtx = allPostsContext `mappend` bodyField "description"
+      posts <- fmap (take 20) . recentFirst =<< loadPosts
+      renderAtom feedConfiguration feedCtx posts
+
+  create ["rss.xml"] $ do
+    route idRoute
+    compile $ do
+      let feedCtx = allPostsContext `mappend` bodyField "description"
+      posts <- fmap (take 20) . recentFirst =<< loadPosts
+      renderRss feedConfiguration feedCtx posts
+
