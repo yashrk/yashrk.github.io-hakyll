@@ -115,5 +115,5 @@ main = hakyll $ do
     route idRoute
     compile $ do
       let feedCtx = allPostsContext <> bodyField "description"
-      posts <- fmap (take 20) . recentFirst =<< loadPosts
+      posts <- (take 20) <$> (recentFirst =<< loadPosts)
       renderRss feedConfiguration feedCtx posts
