@@ -6,7 +6,9 @@ import Text.Pandoc.Options
 -- Utilities
 
 compileTemplates :: Rules ()
-compileTemplates = match "templates/*.html" $ compile templateCompiler
+compileTemplates = do
+  match ("templates/*.html") $ compile templateCompiler
+  match ("templates/*.xml") $ compile templateCompiler
 
 -- Configuration
 
@@ -35,6 +37,7 @@ normalDateCtx = dateField "date" "%d.%m.%0Y"
 
 allPostsContext :: Context String
 allPostsContext = listField "postList" normalDateCtx loadPosts
+  <> constField "root" root                                   -- needed for sitemap.xml
   <> normalDateCtx
 
 loadPosts :: Compiler [Item String]
@@ -45,6 +48,11 @@ loadPostsByPattern pattern = loadAllSnapshots pattern postsSnapshot >>= recentFi
 
 addTagsToAllPostsContext :: Tags -> Context String
 addTagsToAllPostsContext tags = tagsField "tags" tags <> allPostsContext
+
+-- sitemap
+
+root :: String
+root = "https://yashrk.github.io"
 
 -- General site description
 
@@ -77,10 +85,6 @@ main = hakyll $ do
     compile copyFileCompiler
 
   match "*.html" $ do
-    route   idRoute
-    compile copyFileCompiler
-
-  match "*.xml" $ do
     route   idRoute
     compile copyFileCompiler
 
@@ -127,11 +131,11 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadPostsByPattern pattern
             let ctx = constField "title" title
-                      `mappend` constField "tldr" tldr
-                      `mappend` constField "snippetImage" snippetImage
-                      `mappend` constField "published" defaultDate
-                      `mappend` listField "postList" (addTagsToAllPostsContext tags) (return posts)
-                      `mappend` defaultContext
+                      <> constField "tldr" tldr
+                      <> constField "snippetImage" snippetImage
+                      <> constField "published" defaultDate
+                      <> listField "postList" (addTagsToAllPostsContext tags) (return posts)
+                      <> defaultContext
             makeItem ""
                 >>= loadAndApplyTemplate "templates/posts-by-tag.html" ctx
 
@@ -148,3 +152,17 @@ main = hakyll $ do
       let feedCtx = allPostsContext <> bodyField "description"
       posts <- (take 20) <$> (recentFirst =<< loadPosts)
       renderRss feedConfiguration feedCtx posts
+
+  create ["sitemap.xml"] $ do
+    route idRoute
+    compile $ do
+      posts <- loadPosts
+      uniquePages <- loadAll (fromList ["blog/blog-ru.md"])
+      ruPages <- loadAll ("*-ru.md" .||. "travels/*.md" .||. "index.md")
+      enPages <- loadAll "*-en.md"
+      let pages = posts <> uniquePages <> ruPages <> enPages
+      let sitemapCtx =
+            constField "root" root <>
+            listField "pages" allPostsContext (return pages)
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
