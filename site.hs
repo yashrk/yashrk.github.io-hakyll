@@ -40,11 +40,25 @@ allPostsContext = listField "postList" normalDateCtx loadPosts
 loadPosts :: Compiler [Item String]
 loadPosts = loadAllSnapshots "posts/*-ru.md" postsSnapshot >>= recentFirst
 
+loadPostsByPattern :: Pattern -> Compiler [Item String]
+loadPostsByPattern pattern = loadAllSnapshots pattern postsSnapshot >>= recentFirst
+
+addTagsToAllPostsContext :: Tags -> Context String
+addTagsToAllPostsContext tags = tagsField "tags" tags <> allPostsContext
+
 -- General site description
 
 main :: IO ()
 main = hakyll $ do
+  -- Templates
   compileTemplates
+
+  -- Tags
+  tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+  --
+  -- Rules
+  --
 
   match "css/*" $ do
     route   idRoute
@@ -96,13 +110,30 @@ main = hakyll $ do
     compile $ do
       pandocCompilerWith defaultHakyllReaderOptions myWriterOptions
       >>= saveSnapshot postsSnapshot
-      >>= loadAndApplyTemplate "templates/post-ru.html" allPostsContext
+      >>= loadAndApplyTemplate "templates/post-ru.html" (addTagsToAllPostsContext tags)
 
   match ("blog/blog-ru.md") $ do
     route   $ constRoute "blog-ru.html"
     compile $ do
       pandocCompilerWith defaultHakyllReaderOptions myWriterOptions
       >>= loadAndApplyTemplate "templates/blog-ru.html" allPostsContext
+
+  tagsRules tags $ \tag pattern -> do
+        let title = "Посты по тегу «" ++ tag ++ "»"
+        let tldr = "Посты по тегу \"" ++ tag ++ "\""
+        let snippetImage = "snippetImage: /images/capybara.jpeg"
+        let defaultDate = "2024-01-25"
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadPostsByPattern pattern
+            let ctx = constField "title" title
+                      `mappend` constField "tldr" tldr
+                      `mappend` constField "snippetImage" snippetImage
+                      `mappend` constField "published" defaultDate
+                      `mappend` listField "postList" (addTagsToAllPostsContext tags) (return posts)
+                      `mappend` defaultContext
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts-by-tag.html" ctx
 
   create ["atom.xml"] $ do
     route idRoute

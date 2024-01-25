@@ -1,0 +1,20 @@
+<!-- posts-by-tag template output -->
+$partial("templates/header-ru.html")$
+    <main itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="name">$title$</h1>
+      $for(postList)$
+        <!-- post -->
+        <article>
+          <a href="$url$" class="title-link"><h1>$title$</h1></a>
+          <a href="$url$" class="date-link">$date$</a>
+          $body$
+          <div id="tags">
+            $if(tags)$
+            $tags$
+            $endif$
+          </div>
+        </article>
+        <!-- post finished -->
+      $endfor$
+$partial("templates/footer-ru.html")$
+<!-- posts-by-tag template output finished -->
