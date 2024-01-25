@@ -107,13 +107,13 @@ main = hakyll $ do
   create ["atom.xml"] $ do
     route idRoute
     compile $ do
-      let feedCtx = allPostsContext `mappend` bodyField "description"
+      let feedCtx = allPostsContext <> bodyField "description"
       posts <- fmap (take 20) . recentFirst =<< loadPosts
       renderAtom feedConfiguration feedCtx posts
 
   create ["rss.xml"] $ do
     route idRoute
     compile $ do
-      let feedCtx = allPostsContext `mappend` bodyField "description"
+      let feedCtx = allPostsContext <> bodyField "description"
       posts <- fmap (take 20) . recentFirst =<< loadPosts
       renderRss feedConfiguration feedCtx posts
