@@ -117,4 +117,3 @@ main = hakyll $ do
       let feedCtx = allPostsContext `mappend` bodyField "description"
       posts <- fmap (take 20) . recentFirst =<< loadPosts
       renderRss feedConfiguration feedCtx posts
-

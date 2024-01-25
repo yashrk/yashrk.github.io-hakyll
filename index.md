@@ -1,7 +1,7 @@
 ---
 title: Контакты
 published: 2018-05-06
-modified: 2019-12-26
+modified: 2024-01-25
 snippetImage: images/yashrk-ring.png
 tldr: Мои контакты
 ---
