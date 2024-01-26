@@ -162,7 +162,8 @@ main = hakyll $ do
       enPages <- loadAll "*-en.md"
       let pages = posts <> uniquePages <> ruPages <> enPages
       let sitemapCtx =
-            constField "root" root <>
-            listField "pages" allPostsContext (return pages)
+            dateField "date" "%0Y-%m-%d"
+            <> constField "root" root
+            <> listField "pages" allPostsContext (return pages)
       makeItem ""
         >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
